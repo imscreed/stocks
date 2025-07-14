@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Qapital Stocks</string>
+    
+    <!-- Search -->
+    <string name="search_placeholder">Search stocks by symbol or name</string>
+    
+    <!-- Loading -->
+    <string name="loading_stocks">Loading stocks…</string>
+    
+    <!-- Empty State -->
+    <string name="empty_state_title">No stocks found</string>
+    <string name="empty_state_subtitle">Try adjusting your search terms</string>
+    
+    <!-- Error State -->
+    <string name="error_state_title">Something went wrong</string>
+    <string name="error_retry_button">Retry</string>
+    
+    <!-- Network Warning -->
+    <string name="network_warning_message">No internet connection • Prices may not be live</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_search_icon">Search icon</string>
+    <string name="cd_clear_search">Clear search</string>
+    <string name="cd_no_results">No results</string>
+    <string name="cd_error">Error</string>
+    <string name="cd_warning">Warning</string>
+    
+    <!-- Price Format -->
+    <string name="price_format">$%.2f</string>
+    
+    <!-- Error Messages -->
+    <string name="error_no_internet">No internet connection</string>
+    <string name="error_connection_timeout">Connection timeout. Please try again</string>
+    <string name="error_network_error">Network error. Please try again</string>
+    <string name="error_request_failed">Request failed. Please try again</string>
+    <string name="error_server_error">Server error. Please try again later</string>
+    <string name="error_something_wrong">Something went wrong. Please try again</string>
+</resources>

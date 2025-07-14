@@ -1,0 +1,39 @@
+CREATE TABLE Stock (
+    symbol TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    price REAL NOT NULL,
+    cached_at INTEGER NOT NULL
+);
+
+CREATE INDEX idx_stock_name ON Stock(name);
+CREATE INDEX idx_stock_symbol_name ON Stock(symbol, name);
+CREATE INDEX idx_stock_cached_at ON Stock(cached_at);
+CREATE INDEX idx_stock_symbol_prefix ON Stock(symbol COLLATE NOCASE);
+CREATE INDEX idx_stock_name_prefix ON Stock(name COLLATE NOCASE);
+
+insertStock:
+INSERT OR REPLACE INTO Stock(symbol, name, price, cached_at)
+VALUES (?, ?, ?, ?);
+
+getAllStocks:
+SELECT * FROM Stock 
+ORDER BY symbol ASC;
+
+searchStocks:
+SELECT * FROM Stock
+WHERE symbol LIKE '%' || :query || '%' COLLATE NOCASE
+   OR name LIKE '%' || :query || '%' COLLATE NOCASE
+ORDER BY symbol ASC
+LIMIT 100;
+
+deleteOldEntries:
+DELETE FROM Stock WHERE cached_at < :expiry;
+
+getStockCount:
+SELECT COUNT(*) FROM Stock;
+
+getFreshStockCount:
+SELECT COUNT(*) FROM Stock WHERE cached_at > :expiry;
+
+clearAllStocks:
+DELETE FROM Stock; 
