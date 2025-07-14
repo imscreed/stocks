@@ -92,7 +92,7 @@ _Left: Stock list with all available stocks | Center: Search results for "GAI" q
 
    ```bash
    git clone [repository-url]
-   cd QapitalStocks
+   cd stocks
    ```
 
 2. **Open in Android Studio**

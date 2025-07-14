@@ -26,3 +26,23 @@
 .gradle/file-system.probe
 
 .gradle/vcs-1/gc.properties
+
+.idea/.name
+
+.idea/AndroidProjectSystem.xml
+
+.idea/caches/deviceStreaming.xml
+
+.idea/compiler.xml
+
+.idea/deploymentTargetSelector.xml
+
+.idea/gradle.xml
+
+.idea/migrations.xml
+
+.idea/misc.xml
+
+.idea/runConfigurations.xml
+
+.idea/vcs.xml
