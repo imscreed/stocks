@@ -201,6 +201,13 @@ The search algorithm uses simple LIKE queries with case-insensitive matching:
 - **Ordering**: Results ordered by symbol alphabetically
 - **Limit**: 100 results maximum for performance
 
+**Why SQLDelight vs In-Memory Kotlin Filtering:**
+
+- **Memory Efficiency**: Only loads matching results vs all stocks in RAM (prevents OOM with large datasets)
+- **Performance**: O(log n) indexed database search vs O(n) linear filtering through collections
+- **Scalability**: Handles real-world stock volumes (8,000+ symbols) without memory constraints
+- **Battery Optimization**: Reduces CPU usage and garbage collection pressure
+
 ## Project Structure
 
 ```
